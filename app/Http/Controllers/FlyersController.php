@@ -37,7 +37,8 @@ class FlyersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // create the flyer
+        // $request->all()
     }
 
     /**
