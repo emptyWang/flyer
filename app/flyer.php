@@ -6,33 +6,32 @@ use Illuminate\Database\Eloquent\Model;
 
 class flyer extends Model
 {
-	/**
-	 * Fillable fields for a flyer
-	 * 
-	 * $var array
-	 */
-	protected $fillable = [
-		'street',
-		'city',
-		'state',
-		'country',
-		'zip',
-		'price',
-		'description'
-	];
+    /**
+     * Fillable fields for a flyer
+     * 
+     * $var array
+     */
+    protected $fillable = [
+        'street',
+        'city',
+        'state',
+        'country',
+        'zip',
+        'price',
+        'description'
+    ];
 
-	/**
-	* A flyer is composed of many photos.
-	*
-	* @return \Illuminate\Database\Eloquent\Relations\HasMany
-	*/
+    /**
+    * A flyer is composed of many photos.
+    *
+    * @return \Illuminate\Database\Eloquent\Relations\HasMany
+    */
     public function photos()
     {
-    	return $this->hasMany('App\Photo');
+        return $this->hasMany('App\Photo');
     }
 }
 
 
 // $flyer->photos
-
 
