@@ -28,7 +28,7 @@ class FlyersController extends Controller
      */
     public function create()
     {
-        // flash("Welcome Aboard", "Thank you for signed up.");
+        flash("Welcome Aboard", "Thank you for signed up.");
         // flash()->overlay("Welcome Aboard", "Thank you for signed up.");
         return view('flyers.create');
     }
