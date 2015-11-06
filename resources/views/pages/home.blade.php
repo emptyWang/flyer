@@ -10,7 +10,7 @@
 		</p>
 
 		<a href="/flyers/create" class="btn btn-primary">Create a Flyer</a>
-
+        
 	</div>
 
 @stop

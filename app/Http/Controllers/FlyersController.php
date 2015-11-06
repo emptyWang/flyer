@@ -18,7 +18,7 @@ class FlyersController extends Controller
      */
     public function index()
     {
-        //
+        flash()->success('Hi!', 'Welcome to here!');
     }
 
     /**
@@ -28,8 +28,6 @@ class FlyersController extends Controller
      */
     public function create()
     {
-        flash("Welcome Aboard", "Thank you for signed up.");
-        // flash()->overlay("Welcome Aboard", "Thank you for signed up.");
         return view('flyers.create');
     }
 
@@ -55,9 +53,11 @@ class FlyersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($zip, $street)
     {
-        //
+        $flyer = Flyer::locateAt($zip, $street)->first();
+
+        return view('flyers.show', compact('flyer'));
     }
 
     /**
