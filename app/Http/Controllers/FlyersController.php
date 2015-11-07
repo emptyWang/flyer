@@ -11,6 +11,11 @@ use App\Flyer;
 
 class FlyersController extends Controller
 {
+    public function __construct()
+    {
+        // $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -39,6 +44,7 @@ class FlyersController extends Controller
      */
     public function store(FlyerRequest $request)
     {
+        dd($request);
         Flyer::create($request->all());
 
         flash()->success('Success', 'Your flyer has been created!');
