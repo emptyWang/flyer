@@ -17,7 +17,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Project name</a>
+          <a class="navbar-brand" href="#">ProjectFlyer</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
@@ -42,6 +42,7 @@
 		@yield('content')
 	</div>
  
+    <script src="/js/jquery.js"></script>
     <script src="/js/libs.js"></script>
     @yield('scripts.footer')
 
