@@ -31,7 +31,7 @@
                 </div>
 
                 <div class="form-group">
-                    <button type="submit" class="btn btn-primary">Register</button>
+                    <button type="submit" class="btn btn-primary">Register</button> <a href="/auth/login" class="btn btn-default">Already has a account.</a>
                 </div>
             </form>
             

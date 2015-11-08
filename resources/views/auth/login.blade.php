@@ -3,6 +3,10 @@
 @section('content')
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
+            <h1>Login</h1>
+
+            <hr>
+
             <form method="POST" action="/auth/login">
                 {!! csrf_field() !!}
                 <div class="form-group">
@@ -20,7 +24,7 @@
                 </div>
             
                 <div class="form-group">
-                    <button type="submit" class="btn btn-primary">Login</button>
+                    <button type="submit" class="btn btn-primary">Login</button> <a href="/auth/register" class="btn btn-default">Signed Up</a>
                 </div>
             </form>
             
