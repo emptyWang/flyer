@@ -1,9 +1,6 @@
 <?php
 
-Route::get('/', function () {
-    flash()->success('Hi!', 'Welcome to here!');
-    return view('pages.home');
-});
+Route::get('/', 'PagesController@home');
 
 // Authentication routes...
 Route::get('auth/login', 'Auth\AuthController@getLogin');

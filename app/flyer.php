@@ -57,6 +57,27 @@ class flyer extends Model
     {
         return $this->hasMany('App\Photo');
     }
+
+    /**
+     * A flyer is owed by a user
+     * 
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function owner()
+    {
+        return $this->belongsTo('App\User', 'user_id');
+    }
+
+    /**
+     * Determine if the given user create the flyer
+     * 
+     * @param User $user
+     * @param boolean
+     */
+    public function ownedBy(User $user)
+    {
+        return $this->user_id == $this->id;
+    }
 }
 
 
