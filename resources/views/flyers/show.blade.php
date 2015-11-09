@@ -15,6 +15,7 @@
                 <div class="row">
                     @foreach($set as $photo)
                         <div class="col-md-3 gallery__image">
+                            {!! link_to('Delete', "/photos/{$photo->id}", 'DELETE') !!}
                             <a href="/{{ $photo->path }}" data-lity>
                                 <img src="/{{ $photo->thumbnail_path }}" alt="">
                             </a>
