@@ -24,7 +24,9 @@ class FlyersController extends Controller
      */
     public function index()
     {
-        flash()->success('Hi!', 'Welcome to here!');
+        $flyers = Flyer::where(['user_id' => $this->user->id])->get();
+
+        return view('flyers.index', compact('flyers'));
     }
 
     /**

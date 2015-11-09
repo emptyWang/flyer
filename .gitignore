@@ -6,3 +6,4 @@ Homestead.json
 .DS_Store
 /.idea
 /bower_components
+/public/flyer/photos
