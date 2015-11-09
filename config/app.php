@@ -39,7 +39,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'asia/Shanghai',
 
     /*
     |--------------------------------------------------------------------------
@@ -96,6 +96,23 @@ return [
     */
 
     'log' => 'single',
+
+    /*
+    |--------------------------------------------------------------------------
+    | 阿里云 OSS 
+    |--------------------------------------------------------------------------
+    |
+    |'ossServer' => '服务器外网地址', //青岛为 http://oss-cn-qingdao.aliyuncs.com
+    |'ossServerInternal' => '服务器内网地址', //青岛为 http://oss-cn-qingdao-internal.aliyuncs.com
+    |'AccessKeyId' => '阿里云给的AccessKeyId',
+    |'AccessKeySecret' => '阿里云给的AccessKeySecret',
+    |
+    */
+
+    'ossServer' => 'http://oss-cn-beijing.aliyuncs.com',
+    'ossServerInternal' => 'http://oss-cn-beijing-internal.aliyuncs.com',
+    'AccessKeyId' => 'J5bSU1yZsQMZs571',
+    'AccessKeySecret' => 'tSu1Ll8TKBCDXr4Q46y3o7ZJD2Ul4h',
 
     /*
     |--------------------------------------------------------------------------
