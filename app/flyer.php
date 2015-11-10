@@ -68,11 +68,13 @@ class flyer extends Model
         return $this->belongsTo('App\User', 'user_id');
     }
 
+
     /**
      * Determine if the given user create the flyer
-     * 
+     *
      * @param User $user
-     * @param boolean
+     *
+     * @return bool
      */
     public function ownedBy(User $user)
     {

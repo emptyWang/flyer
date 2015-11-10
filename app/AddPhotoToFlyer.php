@@ -3,6 +3,7 @@
 namespace App;
 
 use Symfony\Component\HttpFoundation\File\UploadedFile;
+use App\Services\OSS;
 
 class AddPhotoToFlyer
 {
@@ -24,6 +25,9 @@ class AddPhotoToFlyer
         $this->file->move($photo->baseDir(), $photo->name);
 
         $this->thumbnail->make($photo->path, $photo->thumbnail_path);
+
+        //add file to OSS
+        OSS::upload($photo->path, $photo->path);
     }
 
     protected function makePhoto()

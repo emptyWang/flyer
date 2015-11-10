@@ -17,7 +17,8 @@
                         <div class="col-md-3 gallery__image">
                             {!! link_to('Delete', "/photos/{$photo->id}", 'DELETE') !!}
                             <a href="/{{ $photo->path }}" data-lity>
-                                <img src="/{{ $photo->thumbnail_path }}" alt="">
+                                <img src="{{ oss_photo_link($photo->path) }}" alt="">
+{{--                                <img src="/{{ $photo->thumbnail_path }}" alt="">--}}
                             </a>
                         </div>
                     @endforeach

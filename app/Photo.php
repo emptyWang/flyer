@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Services\OSS;
 use Illuminate\Database\Eloquent\Model;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 
@@ -36,6 +37,9 @@ class Photo extends Model
             $this->thumbnail_path
         ]);
 
+        OSS::deleteObject($this->path);
+
         parent::delete();
+
     }
 }
